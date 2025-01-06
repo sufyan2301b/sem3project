@@ -1,0 +1,114 @@
+﻿@model TARS_Delivery_System.Models.DeliverablesTbl
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<h4>DeliverablesTbl</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DeliverableId" class="control-label"></label>
+                <input asp-for="DeliverableId" class="form-control" />
+                <span asp-validation-for="DeliverableId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="BranchId" class="control-label"></label>
+                <select asp-for="BranchId" class ="form-control" asp-items="ViewBag.BranchId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliveryType" class="control-label"></label>
+                <input asp-for="DeliveryType" class="form-control" />
+                <span asp-validation-for="DeliveryType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weight" class="control-label"></label>
+                <input asp-for="Weight" class="form-control" />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliveryDate" class="control-label"></label>
+                <input asp-for="DeliveryDate" class="form-control" />
+                <span asp-validation-for="DeliveryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SendDate" class="control-label"></label>
+                <input asp-for="SendDate" class="form-control" />
+                <span asp-validation-for="SendDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentStatus" class="control-label"></label>
+                <input asp-for="PaymentStatus" class="form-control" />
+                <span asp-validation-for="PaymentStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Charge" class="control-label"></label>
+                <input asp-for="Charge" class="form-control" />
+                <span asp-validation-for="Charge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenderName" class="control-label"></label>
+                <input asp-for="SenderName" class="form-control" />
+                <span asp-validation-for="SenderName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenderContact" class="control-label"></label>
+                <input asp-for="SenderContact" class="form-control" />
+                <span asp-validation-for="SenderContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceiverName" class="control-label"></label>
+                <input asp-for="ReceiverName" class="form-control" />
+                <span asp-validation-for="ReceiverName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceiverContact" class="control-label"></label>
+                <input asp-for="ReceiverContact" class="form-control" />
+                <span asp-validation-for="ReceiverContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceiverAddress" class="control-label"></label>
+                <input asp-for="ReceiverAddress" class="form-control" />
+                <span asp-validation-for="ReceiverAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrackingId" class="control-label"></label>
+                <input asp-for="TrackingId" class="form-control" />
+                <span asp-validation-for="TrackingId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,42 @@
+﻿@model TARS_Delivery_System.Models.ViewModel.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="container" style="margin-top: 50px;">
+    <h1 class="text-center" style="margin-bottom: 30px; font-size: 2.5rem; color: #5a5a5a; font-weight: bold;">
+        Login Form
+    </h1>
+
+    <div class="row">
+        <div class="col-md-4 mx-auto" style="background-color: #f8f9fa; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="form-group mt-3">
+                    <label asp-for="Email" class="control-label" style="font-size: 1.2rem; font-weight: 600;">Email</label>
+                    <input asp-for="Email" class="form-control" style="border-radius: 10px; padding: 10px;" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label asp-for="Password" class="control-label" style="font-size: 1.2rem; font-weight: 600;">Password</label>
+                    <input asp-for="Password" class="form-control" style="border-radius: 10px; padding: 10px;" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <button type="submit" value="Login" class="btn btn-primary btn-block mt-4" style="border-radius: 25px; padding: 10px 20px; font-size: 1.2rem;">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+

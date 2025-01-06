@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TARS_Delivery_System.props" />
+</Project>
